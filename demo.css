@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/* CSS Document */
+/* This is how you make a comment in css*/
+
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+    background-image: url(IMAG0515.jpg);
+	background-color: #C1A995;
+}
+
+body {
+    font-family: sans-serif;
+	border: solid 10px #4E213B;
+	background-color:#ECDBCC;
+	width: 660px;
+	margin: 20px auto;
+	padding-bottom: 15px;
+	border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+}
+
+h1 {
+    font-family: Shrikhand, cursive;
+	font-weight:normal;
+	text-align:center;
+	padding: 10px 10px 0;
+	font-size: 2.5em;
+	background-color:#4E213B;
+	color: #FFFFFF;
+	border-radius: 15px 15px 0 0;
+	-moz-border-radius-topleft: 15px;
+	-moz-border-radius-topright: 15px;
+	-webkit-border-top-left-radius: 15px;
+	-webkit-border-top-right-radius: 15px;
+    margin-top: -5px;
+}
+
+h2,h3,h4,h5,h6 {
+	font-family: Shrikhand, cursive;
+	padding: 10px 25px 10px;
+	color:#4E213B;
+}
+
+p{
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: .9em;
+	color:#568856;
+	padding: 10px 25px 10px;
+}
+
+li {
+	font-size: .9em;
+	color:#6d4136;
+	padding: 0 25px 10px;
+	list-style:inside;	
+}
+
+img {
+	float:left;
+}
+
+footer {
+	background-color:#4E213B;
+	color: #FFFFFF;
+	-moz-border-radius-bottomleft: 15px;
+	-moz-border-radius-bottomright: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	-webkit-border-bottom-right-radius: 15px;
+    margin-bottom: -20px;
+    clear: both
+}
+
+.white {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+a:link {
+    color: cornflowerblue;
+}
+
+a:visited {
+    color: darkorange;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+img{
+    max-width: 400px;
+    float: left;
+    padding-right: 10px;
+}
+
+.first {
+    clear: both;
+    color: #4E213B;
+    background-color: #A3BDA3;
+    margin-left: -40px;
+    padding-left: 40px;
+}
+
+.fp {
+    width: 200px;
+    float: right;
+    margin-top: 50px;
+    color: black;
+    line-height: 1.8em;
+    margin-top: auto
+    font-weight: bold;
+    border-left-style: solid;
+    border-width: 10px;
+    border-color: #A3BDA3;
+}
+
+.content {
+    height: 450px;
+    background-color: #ECDBCC;
+    color: #779A77;
+}
+
+.rightcol {
+    width: 48%;
+    float: right;
+    margin-top: -200px;
+}
+
+.leftcol {
+    width: 48%;
+}
