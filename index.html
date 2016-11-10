@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <title>Whitewater Rafting Vacations | Dry Oar Boating | Home</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        
         body {
             font-family: Garamond, "Times New Roman", serif;
         }
@@ -50,20 +54,50 @@
             padding: 15px;
         }
         
+        #top-section,
+        #middle-section {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+        
         #middle-section {
             background-color: #2C899B;
         }
         
         #bottom-section {
             text-align: center;
+            margin: 0 auto;
+            max-width: 600px
         }
         
-        .rightcol {
-            width: 48%;
-        }
-        
+        .rightcol,
         .leftcol {
             width: 48%;
+            flex: 1 0 15em;
+            margin: .5em;
+        }
+        
+        .fullwidth {
+            width: 100%;
+        }
+        
+        footer {
+            height: 55px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2C899B;
+        }
+        
+        .link_img img {
+            width: 50px;
+            margin: auto 0;
+        }
+        
+        #footer_text {
+            line-height: 1em;
+            margin: auto 0;
         }
     </style>
 </head>
@@ -84,10 +118,10 @@
         </nav>
 
         <header>
-            <img src="http://brothert.net/dryoar/images/river-wide3.jpg" alt="white water rafters on river">
+            <img class="fullwidth" src="http://brothert.net/dryoar/images/river-wide3.jpg" alt="white water rafters on river">
         </header>
 
-        <section>
+        <section id="top-section">
             <div class="leftcol">
                 <h1>We Run Rivers to Relax</h1>
                 <p>We believe that there is nothing like a river trip for relaxing. That is why we subscribe to the dry oar philosophy of boating. Keeping your oars dry for us means <strong>taking time</strong> to look around and notice the beauty that surrounds the rivers we love.</p>
@@ -110,14 +144,16 @@
         </section>
 
         <section id="bottom-section">
-                <h2>Join Us</h2>
-                <p>We invite you to come relax with us on one of the amazing rivers we visit. Check out our trips and let us know which one best suits you. We're waiting to hear from you!</p>
+            <h2>Join Us</h2>
+            <p>We invite you to come relax with us on one of the amazing rivers we visit. Check out our trips and let us know which one best suits you. We're waiting to hear from you!</p>
         </section>
         <footer>
-                <p>&copy; 2016 Dry Oar || Marissa Page</p>
+            <p id="footer_text">&copy; 2016 Dry Oar || Marissa Page</p>
+            <div class="link_img">
                 <a href="https://www.facebook.com/" target="_blank"><img src="facebook.png" alt="facebook"></a>
                 <a href="https://twitter.com/" target="_blank"><img src="twitter.png" alt="twitter"></a>
                 <a href="https://www.pinterest.com/" target="_blank"><img src="pinterest.png" alt="pinterest"></a>
+            </div>
         </footer>
     </div>
 </body>
