@@ -12,7 +12,7 @@ nav {
     font-weight: bold;
     line-height: 3em;
     margin-top: -80px;
-    padding-left: 90px;
+    padding-left: 110px;
 }
 
 nav ul { 
@@ -28,18 +28,25 @@ nav li {
     position: relative;
     width: 110px;
     border: solid;
+    margin-left: 20px;
+    border-color: #2C899B;
 }
 
 nav a {
-    padding: 1em .6em;
+    padding: 1em .5em;
 }
 
 a:link {
     color: #2C899B;
 }
 
+a:visited {
+    color: #2C899B;
+}
+
 a:hover {
     background-color: #B11100;
+    color: #2C899B;
 }
 
 h1,
@@ -121,4 +128,5 @@ footer {
 #footer_text {
     line-height: 1em;
     margin: auto 0;
+    padding-left: 1em;
 }
