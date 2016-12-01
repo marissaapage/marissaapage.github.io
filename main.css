@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 body {
@@ -34,6 +35,11 @@ nav li {
 
 nav a {
     padding: 1em .5em;
+}
+
+#active {
+    background-color: #2C899B;
+    color: #FBC244;
 }
 
 a:link {
@@ -82,6 +88,8 @@ img {
 
 section {
     padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #top-section,
@@ -117,7 +125,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2C899B;
+    background-color: #FBC244;
+    clear: both;
 }
 
 .link_img img {
@@ -129,4 +138,23 @@ footer {
     line-height: 1em;
     margin: auto 0;
     padding-left: 1em;
+}
+
+.small_image {
+    float: left;
+    padding: 1em;
+    width: 300px;
+}
+
+h3 {
+    line-height: 2em;
+}
+
+.blogpost_section {
+    background-color: gainsboro
+}
+
+#centered {
+    text-align: center;
+    margin: 0 auto;
 }
