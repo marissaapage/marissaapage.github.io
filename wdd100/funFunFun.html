@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>It's Always a Good Time</title>
+    <script>
+        
+        function checkNum() {
+            var firstNumber = document.getElementById("firstNum_input").value
+            var secondNumber = document.getElementById("secondNum_input").value
+            var newNum = firstNumber & secondNumber
+            document.getElementById("gameOver").innerHTML = firstNumber + " & " + secondNumber +" = "+ newNum
+        }
+        
+        function changeColor(theColor){
+            document.getElementById("tippyTop").style.backgroundColor = theColor;
+        }
+    </script>
+    <style>
+        nav li {
+            display: inline-block;
+        }
+        #logo {
+            width: 200px;
+        }
+        
+        body {
+            background-color: black;
+            margin: 0;
+            background-color: gray;
+            background-repeat: no-repeat;
+        }
+        
+        #content {
+            background-color: white;
+            padding: 1em 3em 3em 4em;
+            box-shadow: 1px 6px 8px #333333 inset;
+            max-width: 600px;
+            height: 375px;
+            margin: auto;
+        }
+        
+        h2 {
+            margin: 0;
+            line-height: 100px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 3em;
+            text-align: center;
+            color: #EB3D3D;
+        }
+        
+        #inputs {
+            width: 306px;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            box-shadow: 16px 4px 5px #333333;
+        }
+        
+        h1 {
+            font-family: Impact, Charcoal, sans-serif;
+            font-size: 3em;
+            color: white;
+            background-color: black;
+            padding: 1.5em;
+            box-shadow: 1px 4px 5px #333333;
+            width: 110%;
+            margin: 0;
+        }
+        
+        p {
+            font-family: "Courier New", Courier, monospace;
+        }
+        
+        img {
+            width: 100px;
+            border-radius: 5px;
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+            margin: auto;
+        }
+        
+        img:hover {
+            filter: none;
+        }
+        
+        #startingP {
+            text-align: center;
+        }
+        
+        #binaryButton {
+            margin: 20px 146px;
+        }
+    </style>
+</head>
+
+<body id="everything">
+    <h1 id="tippyTop">Let's Get This Party Started!</h1>
+    <section id="content">
+        <nav>
+        <ul>
+            <li><button onclick="changeColor('green')">Green</button></li>
+            <li><button onclick="changeColor('orange')">Orange</button></li>
+            <li><button onclick="changeColor('blue')">Blue</button></li>
+            <li><button onclick="changeColor('red')">Red</button></li>
+            <li><button onclick="changeColor('pink')">Pink</button></li>
+            <li><button onclick="changeColor('yellow')">Yellow</button></li>
+        </ul>
+    </nav>
+        <p id="startingP">Please put one number in each box and mess with binary.</p>
+        <section id="inputs">
+            <section>
+                <input id="firstNum_input">
+            </section>
+            <section>
+                <input id="secondNum_input">
+            </section>
+        </section>
+        <button id="binaryButton" onclick="checkNum()">Let's mess with binary</button>
+        <section id="gameOver"></section>
+    </section>
+</body>
+
+</html>
