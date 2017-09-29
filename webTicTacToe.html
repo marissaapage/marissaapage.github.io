@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Let's Play</title>
+    <script>
+        var turn = "O"
+        var boardStorageO = 0
+        var boardStorageX = 0
+
+        /*function buildABoard() {
+            var count = 0
+            for (var rowNum = 0; rowNum < 3; rowNum++) {
+                for (var columnNum = 0; columnNum < 3; columnNum++) {
+                    count++
+                    document.getElementById("box" + count).style.left = 100 + columnNum * 100 + "px";
+                    document.getElementById("box" + count).style.top = 100 + rowNum * 100 + "px";
+                }
+            }
+        }*/
+
+        function play(boxChoice) {
+            if (boxChoice.innerHTML == "" || boxChoice.firstChild.innerHTML == "") {
+                boxChoice.innerHTML = "<h2>" + turn + "</h2>"
+                if (turn == "O") {
+                    boardStorageO += parseInt(boxChoice.id)
+                    checkWinO(boardStorageO)
+                    turn = "X"
+                }
+
+                else {
+                    boardStorageX += parseInt(boxChoice.id)
+                    checkWinX(boardStorageX)
+                    turn = "O"
+                }
+            }
+            if (boardStorageX + boardStorageO == 511){
+                document.getElementById("gameOver").innerHTML = "<p>X's lose. O's lose. You both lose! LOSERS!!!</p><img src='https://pbs.twimg.com/profile_images/666451379720953856/ZkGGcgyd.jpg' onclick='clearBoard()'/>"
+                document.getElementById("gameOver").style.opacity = "1";
+            }
+        }
+
+        function checkWinX(boardStorageX) {
+            var xWinMasks =[7, 56, 73, 84, 146, 273, 292, 448]
+            var won = false
+            for (var i = 0; i < 8; i++) {
+                var winCheck = xWinMasks[i] & boardStorageX
+                if (winCheck == xWinMasks[i]) {
+                    won = true
+                    document.getElementById("gameOver").innerHTML = "<p>The X's won!</p><img src='https://pbs.twimg.com/profile_images/666451379720953856/ZkGGcgyd.jpg' onclick='clearBoard()'/>"
+                    document.getElementById("gameOver").style.opacity = "1";
+                    break
+                }
+            }
+        }
+
+        function checkWinO(boardStorageO) {
+            var oWinMasks =[7, 56, 73, 84, 146, 273, 292, 448]
+            //var won = false
+            for (var i = 0; i < 8; i++) {
+                var winCheck = oWinMasks[i] & boardStorageO
+                if (winCheck == oWinMasks[i]) {
+                    //won = true
+                    document.getElementById("gameOver").innerHTML = "<p>The O's won!</p><img src='https://pbs.twimg.com/profile_images/666451379720953856/ZkGGcgyd.jpg' onclick='clearBoard()'/>"
+                    document.getElementById("gameOver").style.opacity = "1";
+                    break
+                }
+            }
+        }
+
+        function clearBoard() {
+            var theHeaders = document.querySelectorAll("h2");
+            for (var i = 0; i < theHeaders.length; i++) {
+                theHeaders[i].innerHTML = null
+            }
+            document.getElementById("gameOver").innerHTML = null
+            document.getElementById("gameOver").style.opacity = "0";
+            boardStorageO = 0
+            boardStorageX = 0
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            background-image: url("http://2.bp.blogspot.com/-IJJ8kPI8n0g/UOwelxzR9gI/AAAAAAAALS8/3IOqG_eBWsc/s1600/blackboard-backgrounds-wallpapers.jpg");
+            background-repeat: no-repeat;
+        }
+
+        #content {
+            background-color: white;
+            padding: 1em 3em 3em 4em;
+            box-shadow: 1px 6px 8px #333333 inset;
+            max-width: 600px;
+            height: 375px;
+            margin: auto;
+        }
+
+        .boxes {
+            border: solid;
+            border-width: 1px;
+            border-color: white;
+            width: 6em;
+            height: 6em;
+            /*position: absolute;*/
+        }
+
+        h2 {
+            margin: 0;
+            line-height: 100px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 3em;
+            text-align: center;
+            color: #EB3D3D;
+        }
+
+        #gameOver {
+            position: relative;
+            top: -200px;
+            left: 20px;
+            width: 225px;
+            opacity: 0;
+            transition: .5s ease;
+        }
+
+        #board {
+            width: 18.3em;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+            background-image: url("http://2.bp.blogspot.com/-IJJ8kPI8n0g/UOwelxzR9gI/AAAAAAAALS8/3IOqG_eBWsc/s1600/blackboard-backgrounds-wallpapers.jpg");
+            box-shadow: 5px 7px 8px #111111 inset;
+            position: relative;
+            right: -150px;
+        }
+
+        h1 {
+            font-family: Impact, Charcoal, sans-serif;
+            font-size: 3em;
+            color: white;
+            background-color: #285B6F;
+            padding: 1.5em;
+            box-shadow: 1px 2px 8px #555555 inset;
+            width: 110%;
+            margin: 0;
+        }
+
+        p {
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        img {
+            width: 100px;
+            border-radius: 5px;
+            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+            margin: auto;
+        }
+
+        img:hover {
+            filter: none;
+        }
+
+        #startingP {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tic Tac Toe Time</h1>
+    <section id="content">
+        <p id="startingP">You may begin</p>
+        <section id="board">
+            <section>
+                <section class="boxes" id="1" onclick="play(this)"></section>
+                <section class="boxes" id="2" onclick="play(this)"></section>
+                <section class="boxes" id="4" onclick="play(this)"></section>
+            </section>
+            <section>
+                <section class="boxes" id="8" onclick="play(this)"></section>
+                <section class="boxes" id="16" onclick="play(this)"></section>
+                <section class="boxes" id="32" onclick="play(this)"></section>
+            </section>
+            <section>
+                <section class="boxes" id="64" onclick="play(this)"></section>
+                <section class="boxes" id="128" onclick="play(this)"></section>
+                <section class="boxes" id="256" onclick="play(this)"></section>
+            </section>
+        </section>
+        <section id="gameOver"></section>
+    </section>
+
+</body>
+
+</html>
