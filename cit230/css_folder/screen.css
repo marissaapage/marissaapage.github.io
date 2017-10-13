@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+
+* {
+    box-sizing: border-box;
+    /* changes width property
+    to total width instead of content width */
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/cit230/weather/images/sunny-winter.jpg");
+    background-size: cover;
+    padding: .01em 0 .01em 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main,
+figcaption,
+figure {
+    display: block;
+    /* just in case we have
+    any older browsers that don't recognize
+    the HTML5 semantic elements */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.site-name {
+    font-family: 'Sansita', sans-serif;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #0E89D5;
+}
+
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    /* remove any margin from body */
+    padding: 0;
+    /* ditto for padding */
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    line-height: 1.5em;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 0 5px;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: .8em;
+    background-color: #6c4ddb;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+nav a:visited {
+    color: #D8F;
+}
+
+nav a:active {
+    text-decoration: underline;
+    cursor: auto;
+}
+
+nav a:hover {
+    color: #0E89D5;
+}
+
+#page-header {
+    display: flex;
+    align-items: center;
+    background-color: #6c4ddb;
+
+}
+
+.site-name {
+    padding-left: .5em;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #FFF;
+    font-style: italic;
+}
+
+.overview,
+.cur_conditions {
+    background-color: rgba(200, 200, 200, .6);
+    margin: 1em;
+    border: 1px solid;
+    border-radius: 15px;
+    padding: 1em;
+}
+
+.overview {
+    width: 12em;
+    margin: auto;
+}
+
+footer {
+    padding: 1em 0 4em 1em;
+    background-color: #0E89D5;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.li-lining {
+    display: inline;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: .5em 0;
+}
+
+.logo {
+    width: 80px;
+}
+
+#temperature {
+    font-size: 3em;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}

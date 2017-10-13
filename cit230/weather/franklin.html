@@ -6,51 +6,46 @@
     <title>Franklin, ID | Weather </title>
     <meta name="description" content="A display of the weather forcast of the city of Franklin ID.">
     <meta name="viewport" content="width=device-width">
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Sansita');
-
-        h1,h2,h3,h4,h5,h6 {
-            font-family: 'Sansita', sans-serif;
-            color: #0E89D5;
-        }
-
-        body {
-            font-family: 'Helvetica', sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/cit230/css_folder/screen.css" media="screen">
 </head>
 
 <body>
-    <header>
-        <img src="images/plan-images/logo.jpeg" alt="Umbrella and raindrops logo"/>
-        <h1><strong><em>Weather Site</em></strong></h1>
+    <header id="page-header">
+        <img class="logo" src="images/plan-images/logo.jpeg" alt="Umbrella and raindrops logo" />
+        <span class="site-name">Weather Site</span>
     </header>
     <nav>
         <ul>
-            <li><a href="https://marissaapage.github.io/cit230/" title="Go to home page">Home</a></li>
-            <li><a href="#">Franklin</a></li>
+            <li><a href="/cit230/index.html" title="Go to home page">Home</a></li>
+            <li><a href="/cit230/weather/franklin.html">Franklin</a></li>
             <li><a href="#">Greenville</a></li>
             <li><a href="#">Springfield</a></li>
             <li><a href="#">Search</a></li>
         </ul>
     </nav>
     <main>
-        <article>
-            <h2>Franklin, ID</h2>
-            <section>
-                <h3>Current Conditions</h3>
-                <p><b>Wind:</b> Southwest @ 1-5 MPH</p>
-                <p><b>Precipitation:</b> 0%</p>
-                <p><b>Sunny</b></p>
-            </section>
-            <section>
-                <h3>Current Temp</h3>
-            </section>
-            <section>
-                <h3>Hourly Forcast</h3>
-            </section>
-        </article>
+        <h1>Franklin, ID</h1>
+        <section class="overview">
+            <p id="temperature">16 F</p>
+            <ul>
+                <li>Summery image</li>
+                <li><b>17 F / -3 F</b></li>
+            </ul>
+        </section>
+        <section class="cur_conditions">
+            <h2>Current Conditions</h2>
+            <ul>
+                <li>
+                    <h3 class="li-lining">Wind:</h3>
+                    <p class="li-lining">Southwest @ 1-5 MPH</p>
+                </li>
+                <li>
+                    <h3 class="li-lining">Precipitation:</h3>
+                    <p class="li-lining">0%</p>
 
+                </li>
+            </ul>
+        </section>
     </main>
     <footer>
         &copy;2017 Weather Site | Marissa Page

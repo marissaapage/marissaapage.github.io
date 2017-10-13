@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <title>It's Always a Good Time</title>
     <script>
-        
+
         function checkNum() {
             var firstNumber = document.getElementById("firstNum_input").value
             var secondNumber = document.getElementById("secondNum_input").value
             var newNum = firstNumber & secondNumber
             document.getElementById("gameOver").innerHTML = firstNumber + " & " + secondNumber +" = "+ newNum
         }
-        
+
         function changeColor(theColor){
             document.getElementById("tippyTop").style.backgroundColor = theColor;
         }
@@ -24,14 +24,14 @@
         #logo {
             width: 200px;
         }
-        
+
         body {
             background-color: black;
             margin: 0;
             background-color: gray;
             background-repeat: no-repeat;
         }
-        
+
         #content {
             background-color: white;
             padding: 1em 3em 3em 4em;
@@ -40,7 +40,7 @@
             height: 375px;
             margin: auto;
         }
-        
+
         h2 {
             margin: 0;
             line-height: 100px;
@@ -49,7 +49,7 @@
             text-align: center;
             color: #EB3D3D;
         }
-        
+
         #inputs {
             width: 306px;
             display: flex;
@@ -57,7 +57,7 @@
             margin: auto;
             box-shadow: 16px 4px 5px #333333;
         }
-        
+
         h1 {
             font-family: Impact, Charcoal, sans-serif;
             font-size: 3em;
@@ -68,11 +68,11 @@
             width: 110%;
             margin: 0;
         }
-        
+
         p {
             font-family: "Courier New", Courier, monospace;
         }
-        
+
         img {
             width: 100px;
             border-radius: 5px;
@@ -80,15 +80,15 @@
             filter: grayscale(100%);
             margin: auto;
         }
-        
+
         img:hover {
             filter: none;
         }
-        
+
         #startingP {
             text-align: center;
         }
-        
+
         #binaryButton {
             margin: 20px 146px;
         }
