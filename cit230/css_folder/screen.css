@@ -64,12 +64,8 @@ body {
 nav ul {
     display: flex;
     line-height: 1.5em;
-    justify-content: center;
+    justify-content: space-around;
     padding: 0;
-}
-
-nav ul li {
-    padding: 0 5px;
 }
 
 nav {
@@ -78,7 +74,7 @@ nav {
     left: 0;
     right: 0;
     font-size: .8em;
-    background-color: #6c4ddb;
+    background-color: #0E89D5;
 }
 
 nav a {
@@ -102,7 +98,7 @@ nav a:hover {
 #page-header {
     display: flex;
     align-items: center;
-    background-color: #6c4ddb;
+    background-color: #0E89D5;
 
 }
 
