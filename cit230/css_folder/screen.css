@@ -11,16 +11,6 @@
     box-sizing: border-box;
 }
 
-main {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    background-image: url("/cit230/weather/images/sunny-winter.jpg");
-    background-size: cover;
-    padding: .01em 0 .01em 0;
-}
-
 article,
 aside,
 footer,
@@ -61,11 +51,25 @@ body {
     font-size: 20px;
 }
 
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/cit230/weather/images/sunny-winter.jpg");
+    background-size: cover;
+    padding: .01em 0 .01em 0;
+}
+
 nav ul {
     display: flex;
-    line-height: 1.5em;
     justify-content: space-around;
     padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    line-height: 3em;
 }
 
 nav {
@@ -111,17 +115,13 @@ nav a:hover {
 }
 
 .overview,
-.cur_conditions {
+.cur_conditions,
+.hourly {
     background-color: rgba(200, 200, 200, .6);
     margin: 1em;
     border: 1px solid;
     border-radius: 15px;
     padding: 1em;
-}
-
-.overview {
-    width: 12em;
-    margin: auto;
 }
 
 footer {
@@ -152,4 +152,69 @@ h1 {
     font-weight: 600;
     margin: 0;
     text-align: center;
+}
+
+.invisible {
+    display: none;
+}
+
+@media screen and (min-width: 500px) {
+    .invisible {
+        display: inline-block;
+    }
+
+    .visible {
+        display: none;
+    }
+
+    nav {
+        position: initial;
+        line-height: .5em;
+        font-size: 1em;
+    }
+
+    main {
+        flex-flow: row wrap;
+        align-items: stretch;
+        background-image: url("/cit230/weather/images/plan-images/raindrops.jpg");
+    }
+
+    .city {
+        align-self: flex-start;
+        text-align: left;
+        padding-left: 1em;
+        flex: 0 0 100%;
+        order: 1;
+    }
+
+    .overview {
+        order: 3;
+    }
+    .cur_conditions {
+        order: 2;
+    }
+    .hourly {
+        order: 4;
+    }
+
+    footer {
+        padding-bottom: 1em;
+    }
+
+    .overflow_fix {
+        height: 200px;
+        overflow: auto;
+        width: 220px;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: space-around;
+    }
+
+    .left {
+        text-align: right;
+    }
+
+    .site-name {
+        font-size: 2.5em;
+    }
 }

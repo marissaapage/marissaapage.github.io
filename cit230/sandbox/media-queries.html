@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>MEDIA QUERIES</title>
+    <style type="text/css">
+        /* MOBILE FIRST & GENERAL */
+
+        h1 {
+            text-align: center;
+        }
+
+        h1:after {
+            content: ' - PHONE';
+            display: inline;
+        }
+
+        section {
+            min-width: 100px;
+            min-height: 100px;
+            border: 1px solid #000;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: space-around;
+        }
+
+        /* PRINT VERSION */
+
+        @media print {
+            h1:after {
+                content: ' - PRINT';
+                display: inline;
+            }
+            body {
+                margin: 0 1.5in;
+            }
+        }
+
+
+        /* TABLET VERSION */
+
+        @media only screen and (min-width: 768px) {
+            h1:after {
+                content: ' - TABLET';
+                display: inline;
+            }
+            #wthr-content {
+                display: flex;
+            }
+            #wthr-content section {
+                flex-grow: 1;
+            }
+        }
+
+        /* DESKTOP VERSION */
+
+        @media only screen and (min-width: 980px) {
+            h1:after {
+                content: ' - DESKTOP';
+                display: inline;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header id="page-header">
+            <span id="site-name">MEDIA QUERIES</span>
+        </header>
+        <nav id="page-nav">
+            <ul>
+                <li>Home</li>
+                <li>Franklin</li>
+                <li>Greenville</li>
+                <li>Springfield</li>
+                <li>Search</li>
+            </ul>
+        </nav>
+        <main>
+            <h1>TEST</h1>
+            <div id="wthr-content">
+                <section>
+                    <h2>Current Conditions</h2>
+                </section>
+                <section>
+                    <h2>Temperatures</h2>
+                </section>
+                <section>
+                    <h2>Hourly Temperatures</h2>
+                </section>
+            </div>
+        </main>
+        <footer id="page-footer">
+            &copy; MEDIA QUERIES DEMO
+        </footer>
+    </div>
+
+</body>
+
+</html>
