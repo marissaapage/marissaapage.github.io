@@ -40,6 +40,7 @@ h1,
 h2 {
     text-align: center;
     color: #0E89D5;
+    margin: 0;
 }
 
 body {
@@ -56,7 +57,7 @@ main {
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
-    background-image: url("/cit230/weather/images/sunny-winter.jpg");
+    background-image: url("../weather/images/sunny-winter.jpg");
     background-size: cover;
     padding: .01em 0 .01em 0;
 }
@@ -118,7 +119,7 @@ nav a:hover {
 .cur_conditions,
 .hourly {
     background-color: rgba(200, 200, 200, .6);
-    margin: 1em;
+    margin: .5em;
     border: 1px solid;
     border-radius: 15px;
     padding: 1em;
@@ -140,7 +141,7 @@ ul {
 
 h1 {
     font-size: 2.5em;
-    margin: .5em 0;
+    margin: .2em 0;
 }
 
 .logo {
@@ -176,7 +177,7 @@ h1 {
     main {
         flex-flow: row wrap;
         align-items: stretch;
-        background-image: url("/cit230/weather/images/plan-images/raindrops.jpg");
+        background-image: url("../weather/images/plan-images/raindrops.jpg");
     }
 
     .city {
@@ -217,4 +218,13 @@ h1 {
     .site-name {
         font-size: 2.5em;
     }
+
+    #temperature {
+        margin: .5em 0 0 0;
+    }
+
+    .overview,
+    .cur_conditions,
+    .hourly {
+        margin: .5em 1em;
 }
