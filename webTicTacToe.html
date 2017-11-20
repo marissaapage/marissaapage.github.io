@@ -24,13 +24,13 @@
                 boxChoice.innerHTML = "<h2>" + turn + "</h2>"
                 if (turn == "O") {
                     boardStorageO += parseInt(boxChoice.id)
-                    checkWinO(boardStorageO)
+                    checkWinO()
                     turn = "X"
                 }
 
                 else {
                     boardStorageX += parseInt(boxChoice.id)
-                    checkWinX(boardStorageX)
+                    checkWinX()
                     turn = "O"
                 }
             }
@@ -40,7 +40,7 @@
             }
         }
 
-        function checkWinX(boardStorageX) {
+        function checkWinX() {
             var xWinMasks =[7, 56, 73, 84, 146, 273, 292, 448]
             var won = false
             for (var i = 0; i < 8; i++) {
@@ -54,7 +54,7 @@
             }
         }
 
-        function checkWinO(boardStorageO) {
+        function checkWinO() {
             var oWinMasks =[7, 56, 73, 84, 146, 273, 292, 448]
             //var won = false
             for (var i = 0; i < 8; i++) {

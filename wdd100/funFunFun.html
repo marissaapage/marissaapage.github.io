@@ -4,58 +4,57 @@
 <head>
     <meta charset="utf-8">
     <title>It's Always a Good Time</title>
-    <script>
-
-        function checkNum() {
-            var firstNumber = document.getElementById("firstNum_input").value
-            var secondNumber = document.getElementById("secondNum_input").value
-            var newNum = firstNumber & secondNumber
-            document.getElementById("gameOver").innerHTML = firstNumber + " & " + secondNumber +" = "+ newNum
-        }
-
-        function changeColor(theColor){
-            document.getElementById("tippyTop").style.backgroundColor = theColor;
-        }
-    </script>
     <style>
-        nav li {
-            display: inline-block;
+        * {
+            box-sizing: border-box;
+            /* changes width property
+            to total width instead of content width */
         }
-        #logo {
-            width: 200px;
+
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        article,
+        aside,
+        footer,
+        header,
+        nav,
+        section,
+        main,
+        figcaption,
+        figure {
+            display: block;
+            /* just in case we have
+            any older browsers that don't recognize
+            the HTML5 semantic elements */
         }
 
         body {
-            background-color: black;
             margin: 0;
+            padding: 0;
             background-color: gray;
             background-repeat: no-repeat;
         }
 
-        #content {
+        main {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            justify-content: center;
+            background-image: url("/cit230/weather/images/sunny-winter.jpg");
+            background-size: cover;
             background-color: white;
-            padding: 1em 3em 3em 4em;
-            box-shadow: 1px 6px 8px #333333 inset;
-            max-width: 600px;
-            height: 375px;
-            margin: auto;
         }
 
         h2 {
             margin: 0;
-            line-height: 100px;
+            line-height: 2em;
             font-family: "Courier New", Courier, monospace;
-            font-size: 3em;
+            font-size: 2em;
             text-align: center;
             color: #EB3D3D;
-        }
-
-        #inputs {
-            width: 306px;
-            display: flex;
-            flex-direction: row;
-            margin: auto;
-            box-shadow: 16px 4px 5px #333333;
         }
 
         h1 {
@@ -63,63 +62,56 @@
             font-size: 3em;
             color: white;
             background-color: black;
-            padding: 1.5em;
-            box-shadow: 1px 4px 5px #333333;
-            width: 110%;
-            margin: 0;
+            padding: 1em;
         }
 
         p {
             font-family: "Courier New", Courier, monospace;
         }
 
-        img {
-            width: 100px;
-            border-radius: 5px;
-            -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-            filter: grayscale(100%);
-            margin: auto;
+        .flex_items {
+            background-color: rgba(200, 200, 200, .6);
+            margin: 1em;
+            border: 1px solid;
+            border-radius: 15px;
+            padding: 1em;
         }
 
-        img:hover {
-            filter: none;
-        }
-
-        #startingP {
-            text-align: center;
-        }
-
-        #binaryButton {
-            margin: 20px 146px;
+        p {
+            display: inline;
         }
     </style>
 </head>
 
 <body id="everything">
-    <h1 id="tippyTop">Let's Get This Party Started!</h1>
-    <section id="content">
-        <nav>
-        <ul>
-            <li><button onclick="changeColor('green')">Green</button></li>
-            <li><button onclick="changeColor('orange')">Orange</button></li>
-            <li><button onclick="changeColor('blue')">Blue</button></li>
-            <li><button onclick="changeColor('red')">Red</button></li>
-            <li><button onclick="changeColor('pink')">Pink</button></li>
-            <li><button onclick="changeColor('yellow')">Yellow</button></li>
-        </ul>
-    </nav>
-        <p id="startingP">Please put one number in each box and mess with binary.</p>
-        <section id="inputs">
-            <section>
-                <input id="firstNum_input">
-            </section>
-            <section>
-                <input id="secondNum_input">
-            </section>
+    <h1 id="tippyTop">Flexbox</h1>
+    <main>
+        <h1 class="city">Franklin, ID</h1>
+        <section class="flex_items">
+            <h2>First Box</h2>
+            <p>Hello, nice to meet you</p>
+            <details>
+                <summary>See More</summary>
+                This text will be hidden if your browser supports it.
+            </details>
+            <details>
+                <summary>See More</summary>
+                This text will be hidden if your browser supports it.
+            </details>
+            <details>
+                <summary>See More</summary>
+                This text will be hidden if your browser supports it.
+            </details>
         </section>
-        <button id="binaryButton" onclick="checkNum()">Let's mess with binary</button>
-        <section id="gameOver"></section>
-    </section>
+        <section class="flex_items">
+            <h2>Second Box</h2>
+            <p>Hello, nice to meet you</p>
+        </section>
+        <section class="flex_items">
+            <h2>Third Box</h2>
+            <p>Hello, nice to meet you</p>
+        </section>
+    </main>
 </body>
 
 </html>

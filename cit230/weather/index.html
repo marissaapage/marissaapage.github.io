@@ -1,17 +1,25 @@
 <!doctype html>
-<html lang="en-us">
+<html lang="en">
 
     <head>
         <meta charset="UTF-8">
-        <title>Greenville, SC | Weather </title>
-        <meta name="description" content="A display of the weather forcast of the city of Greenville SC.">
+        <title id = "title">princeky07.github.io | Weather</title>
+        <meta name="description" content="weather_in_franklin">
         <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" type="text/css" href="../css_folder/screen.css" media="screen">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     </head>
-
+    <!-- *********************************************
+* Who Did You Collaborate With On This Assessment?
+* 1. Marissa Page
+* 2. Kristy Prince
+* 3. Abigail Lusley
+* 4. Suyeon Yang
+* 5.
+* ******************************************** -->
     <body>
         <header id="page-header">
-            <img class="logo" src="images/plan-images/logo.jpeg" alt="Umbrella and raindrops logo for the Weather site" />
+            <img class="logo" src="images/plan-images/logo.jpeg" alt="Umbrella and raindrops logo" />
             <span class="site-name">Weather Site</span>
         </header>
         <nav>
@@ -23,36 +31,31 @@
                 <li><a href="#" title="Search">Search</a></li>
             </ul>
         </nav>
+
         <main>
-            <h1 class="city">Greenville, SC</h1>
-            <section class="overview">
-                <h2 class="invisible">Current Temp</h2>
-                <p id="temperature">16 F</p>
-                <ul>
-                    <li class="li-lining visible">&#9748;</li>
-                    <li class="invisible"><br>Today's High and Low</li>
-                    <li><b>84 F / 55 F</b></li>
-                </ul>
-            </section>
-            <section class="cur_conditions">
-                <h2>Current Conditions</h2>
-                <ul>
-                    <li>
-                        <h3 class="li-lining">Wind:</h3>
-                        <p class="li-lining">West @ 15 - 20 MPH</p>
-                    </li>
-                    <li>
-                        <h3 class="li-lining">Precipitation:</h3>
-                        <p class="li-lining">70%</p>
-                    </li>
-                </ul>
-                <p class="li-lining invisible" title="image">&#9748;</p>
-                <h3 class="li-lining invisible">Afternoon Thunderstorms</h3>
-            </section>
-            <section class="invisible hourly">
-                <h2>Hourly Forcast</h2>
-                <article class="overflow_fix">
-                    <ul class="left" title="hours">
+            <h1 class="city" id="where"></h1>
+                <section class="overview">
+                    <h2>Current Temp</h2>
+                    <h3 id = "currentTemp"></h3>
+                    <p id="temp"></p>
+                </section>
+
+                <section class="cur_conditions">
+                    <h2>Current Conditions</h2>
+                    <ul>
+                        <li id = "wind">
+                        </li>
+                        <li id = "precipitation">
+                        </li>
+                        <li id="summary">
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="hourly">
+                    <h2>Hourly Forecast</h2>
+                    <article class="overflow_fix">
+                    <ul>
                         <li><b>12 am</b></li>
                         <li><b>1 am</b></li>
                         <li><b>2 am</b></li>
@@ -79,37 +82,38 @@
                         <li><b>11 pm</b></li>
                     </ul>
                     <ul class="right" title="temperature in fahrenhiet">
-                        <li>55F</li>
-                        <li>56F</li>
-                        <li>56F</li>
-                        <li>56F</li>
-                        <li>57F</li>
-                        <li>57F</li>
-                        <li>58F</li>
-                        <li>62F</li>
-                        <li>63F</li>
                         <li>67F</li>
+                        <li>67F</li>
+                        <li>69F</li>
+                        <li>69F</li>
+                        <li>69F</li>
                         <li>70F</li>
-                        <li>73F</li>
+                        <li>69F</li>
+                        <li>72F</li>
+                        <li>74F</li>
                         <li>77F</li>
-                        <li>80F</li>
+                        <li>79F</li>
+                        <li>81F</li>
                         <li>84F</li>
+                        <li>86F</li>
+                        <li>88F</li>
+                        <li>90F</li>
+                        <li>90F</li>
+                        <li>85F</li>
                         <li>83F</li>
-                        <li>83F</li>
-                        <li>80F</li>
                         <li>79F</li>
                         <li>74F</li>
                         <li>70F</li>
                         <li>68F</li>
-                        <li>60F</li>
-                        <li>58F</li>
+                        <li>66F</li>
                     </ul>
-                </article>
-            </section>
+                    </article>
+                </section>
         </main>
         <footer>
-            &copy;2017 Weather Site | Marissa Page
+            &copy;2017 Weather Site
         </footer>
+        <script src="../js_folder/main.js"></script>
     </body>
 
 </html>
