@@ -148,7 +148,7 @@ h1 {
     width: 80px;
 }
 
-#temperature {
+#currentTemp {
     font-size: 3em;
     font-weight: 600;
     margin: 0;

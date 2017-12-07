@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title id="city-name-add"> | Weather | marissaapage.github.io</title>
+        <meta name="description" content="weather_in_franklin">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="../css_folder/screen.css" media="screen">
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    </head>
+    <!-- *********************************************
+* Who Did You Collaborate With On This Assessment?
+* 1. Marissa Page
+* 2. Kristy Prince
+* 3. Abigail Lusley
+* 4. Suyeon Yang
+* 5. Levi Sargeant
+* ******************************************** -->
+    <body>
+        <header id="page-header">
+            <img class="logo" src="images/plan-images/logo.jpeg" alt="Umbrella and raindrops logo" />
+            <span class="site-name">Weather Site</span>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html" title="Go to home page">Home</a></li>
+                <li><a href="franklin.html" title="Franklin Idaho Weather">Franklin</a></li>
+                <li><a href="greenville.html" title="Greenville South Carolina Weather">Greenville</a></li>
+                <li><a href="#" title="Springfield Weather">Springfield</a></li>
+                <li><a href="search.html" title="Search">Search</a></li>
+            </ul>
+        </nav>
+
+        <form method="get" action="//autocomplete.wunderground.com/aq" id="srchfrm">
+            <input type="search" name="query" id="query">
+            <input type="submit" name="submit" value="Search" id="send">
+        </form>
+
+        <section id="searchResults">
+            <h2>Search Results</h2>
+        </section>
+
+        <main>
+
+            <h1 class="city" id="where"></h1>
+            <section class="overview">
+                <h2>Current Temp</h2>
+                <h3 id = "currentTemp"></h3>
+                <p id="temp"></p>
+            </section>
+
+            <section class="cur_conditions">
+                <h2>Current Conditions</h2>
+                <ul>
+                    <li id="wind">
+                    </li>
+                    <li id="precipitation">
+                    </li>
+                    <li id="summary">
+                    </li>
+                </ul>
+            </section>
+
+            <section class="hourly">
+                <h2>Hourly Forecast</h2>
+                <article class="overflow_fix">
+                    <p>Under construction</p>
+                </article>
+            </section>
+        </main>
+        <footer>
+            &copy;2017 Weather Site | Marissa Page
+        </footer>
+        <script src="../js_folder/search.js"></script>
+    </body>
+
+</html>
