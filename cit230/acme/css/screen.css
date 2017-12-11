@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    /* changes width property
+    to total width instead of content width */
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../images/site/background.jpg);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+    background-color: white;
+    margin: 0em 1em 1em 1em;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    line-height: 3em;
+    display: inline-block;
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #de2226;
+    padding: 0 1em;
+}
+
+hr {
+    border: 2px solid black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#price {
+    font-family: "Arial Black", Gadget, sans-serif;
+    margin: 0 auto;
+}
+
+h1,
+#price{
+    font-size: 2em;
+}
+
+footer {
+    text-align: center;
+    font-size: .8em;
+    margin-bottom: 5em;
+}
+
+#logo, main, footer {
+    padding: 1em;
+}
+
+p {
+    margin: .5em auto;
+}
+
+button {
+    background-color: #f7f193;
+    border: 1px solid;
+    border-radius: 15px;
+    padding: .4em;
+    font-family: cursive;
+    font-size: 1.4em;
+}
+.rocketAdd {
+    color: #990033;
+    position: relative;
+}
+
+.recipeList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.food {
+    width: 40%;
+    padding: .5em;
+}
+
+.invisible {
+    border-color: #de2226;
+}
+
+#product-contain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+#price {
+    color: #de2226;
+}
+
+#productContent {
+    display: none;
+}
+
+@media screen and (min-width: 550px) {
+    nav {
+        position: initial;
+    }
+
+    .rocketText {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        margin: 0 auto;
+        background-color:
+    }
+
+    .more {
+        display: flex;
+        width: 100%
+    }
+
+    .oneThird {
+        width: 40%;
+    }
+
+    .twoThirds {
+        width: 60%;
+    }
+
+    .invisible {
+        display: none;
+    }
+
+    #product-img {
+        width: 45%;
+    }
+
+    #product-info {
+        width: 45%;
+    }
+}
