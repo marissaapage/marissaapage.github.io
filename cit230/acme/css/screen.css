@@ -134,7 +134,11 @@ button {
         top: 1em;
         right: 1em;
         margin: 0 auto;
-        background-color:
+    }
+
+    .rocketAdd {
+        max-width: 918px;
+        margin: 0, auto;
     }
 
     .more {

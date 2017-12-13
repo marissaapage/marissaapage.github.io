@@ -1,7 +1,7 @@
 //Navigation bar
-/*$(function(){
+$(function(){
     console.log("success");
-    $.getJSON("acme.json", function(data){
+    $.getJSON("/cit230/acme/js/acme.json", function(data){
         let output = '<ul class="navbar">';
         $.each(data, function (key, val){
             output += '<li>';
@@ -11,7 +11,7 @@
         output += '</ul>';
         $("#navigation").html(output);
     });
-});*/
+});
 
 // *** Nav bar Click --> create Pages
 $("#navigation").on("click", "a", function (evt) {
@@ -36,6 +36,7 @@ $("#navigation").on("click", "a", function (evt) {
 
 
                 var prod_title = data[linkclick].name;
+                var prod_name = data[linkclick].fullname;
                 var pic = data[linkclick].path;
                 var tell_more = data[linkclick].description;
                 var make = data[linkclick].manufacturer;
@@ -46,7 +47,7 @@ $("#navigation").on("click", "a", function (evt) {
 
 
                 $("title").html(prod_title + ' | ACME');
-                $("#product").text(prod_title);
+                $("#product").text(prod_name);
                 $("#product-img").html('<img alt="picture of the product" src='+ pic +'>');
                 $("#descrip").text(tell_more);
                 $("#manufac").html('<b>Made by: </b>' + make );
